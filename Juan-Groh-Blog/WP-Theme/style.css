@@ -1,0 +1,65 @@
+:root {
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(115, 115 ,115, 0.8);
+    --orange: rgb(237, 145, 33);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0.5rem;
+    padding: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    background: #333;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.section-geek-hub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(./assets/coding.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 45vh;
+    margin-bottom: 0.5rem;
+}
+
+.section-squash-drive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(./assets/squash.jpg);
+    background-position: 75% 85%;
+    background-size: cover;
+    text-align: center;
+    height: 45vh;
+    margin-top: 0.5rem;
+}
+
+.button {
+    display: inline-block;
+    margin: 0;
+    padding: 1.5rem;
+    background: rgba(50, 50, 50, 0.90);
+    border: 2px solid var(--light);
+    box-shadow: var(--shadow);
+    text-align: center;
+    text-decoration: none;
+    text-emphasis: none;
+    color: var(--orange);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer {
+    color: var(--light);
+}
+
