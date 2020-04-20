@@ -1,0 +1,29 @@
+/* Novecento Normal */
+@font-face {
+    font-family: NovRegular;
+    src: url(./assets/fonts/Novecento\ Normal.ttf) format("truetype");
+}
+
+/* Novecento Medium */
+@font-face {
+    font-family: NovMedium;
+    src: url(./assets/fonts/Novecento\ Medium.ttf) format("truetype");
+}
+
+/* Novecento Light */
+@font-face {
+    font-family: "Novecento Light";
+    src: url(./assets/fonts/Novecento\ Light.ttf) format("truetype");
+}
+
+/* Novecento Wide Normal */
+@font-face {
+    font-family: "Novecento Wide Normal";
+    src: url(./assets/fonts/Novecento\ WideNormal.ttf) format("truetype");
+}
+
+/* Novecento Wide Medium */
+@font-face {
+    font-family: "Novecento Wide Medium";
+    src: url(./assets/fonts/Novecento\ WideMedium.ttf) format("truetype");
+}
