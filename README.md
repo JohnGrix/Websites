@@ -3,5 +3,4 @@
 Website projects:
 
 - My Personal Blog (Juan-Groh)
-
-Websites are run on a `MAMP Server`
+- Landing-Page-Traversy-Media (Reactive landing page inspired by Traversy Media)
