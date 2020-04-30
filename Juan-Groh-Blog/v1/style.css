@@ -1,0 +1,192 @@
+:root {
+    --section-bg-color: #333;
+    --left-bg-color: rgba(223, 39, 39, 0.7);
+    --left-button-hover-color: rgba(161, 11, 11, 0.3);
+    --right-bg-color: rgba(43, 43, 43, 0.7);
+    --right-button-hover-color: rgba(92, 92, 92, 0.3);
+    --hover-width: 60%;
+    --remaining-width: 40%;
+    --speed: 1000ms;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    color: white;
+    overscroll-behavior: none ;
+    background: grey;
+}
+
+h1 {
+    font-size: 2.5rem;
+    position: absolute;
+    white-space: nowrap;
+}
+
+img {
+    width: 100%;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0;
+    height: 10vh;
+    width: 100vw;
+}
+
+.logo {
+    display: block;
+    width: 50px;
+    padding: 10px;
+}
+
+#name {
+    display: inline-block;
+    padding: 0;
+    margin: 0 0 0 10px;
+    font-size: 2rem;
+}
+
+.menu ul {
+    display: grid;
+    grid-area: "buttons";
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, minmax(50px, auto));
+    list-style: none;
+    text-emphasis: none;
+}
+
+.nav-button {
+    display: block;
+    text-transform: uppercase;
+    border: 2px solid white;
+}
+
+.menu a { 
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.split {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.split-left h1 {
+    top: 20%;
+}
+
+.split-right h1 {
+    top: 20%;
+}
+
+.button {
+    display: block;
+    position: absolute;
+    height: 2.5rem;
+    padding-top: 0.9rem;
+    width: 15rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.split-left .button {
+    top: 35%;
+    /* transform: translateX(-50%); */
+}
+
+.split-right .button {
+    top: 35%; 
+    /* transform: translateX(100%); */
+}
+
+.split-left .button:hover {
+    background: var(--left-button-hover-color);
+    border-color: var(--left-button-hover-color) ;
+}
+
+.split-right .button:hover {
+    background: var(--right-button-hover-color);
+    border-color: var(--right-button-hover-color) ;
+}
+
+.split-left {
+    left: 0;
+    background: url("./assets/squash.jpg") center right no-repeat;
+    background-size: cover;
+}
+
+.split-left::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--left-bg-color);
+}
+
+.split-right {
+    right: 0;
+    background: url("./assets/Mac-with-black-background.jpeg") center left no-repeat;
+    background-size: cover;
+}
+
+.split-right::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--right-bg-color);
+}
+
+.split-left, .split-right, .split-left::before, .split-right::before {
+    transition: var(--speed) all ease-in-out;
+}
+
+.hover-left .split-left {
+    width: var(--hover-width);
+}
+
+.hover-left .split-right {
+    width: var(--remaining-width);
+}
+
+.hover-left .split-right::before {
+    z-index: 2;
+}
+
+.hover-right .split-right {
+    width: var(--hover-width);
+}
+
+.hover-right .split-left {
+    width: var(--remaining-width);
+}
+
+.hover-right .split-left::before {
+    z-index: 2;
+}
+
+
