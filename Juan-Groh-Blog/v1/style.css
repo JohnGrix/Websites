@@ -1,4 +1,5 @@
 /* CSS Variables */
+
 :root {
     --section-bg-color: #333;
     --bg-color: rgba(43, 43, 43, 0.7);
@@ -10,15 +11,17 @@
 }
 
 /* General */
+
 html, body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
     color: white;
-    overscroll-behavior: none ;
+    overscroll-behavior: none;
     background: black;
 }
 
@@ -33,37 +36,57 @@ img {
 }
 
 /* Navigation */
+
 header {
     display: grid;
+    position: relative;
     grid-template-columns: 1fr auto;
     grid-auto-flow: column;
     width: 100vw;
     border-bottom: 5px solid var(--yellow);
-    align-items: center;
 }
 
 /* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo img {
-    display: inline-block;
+    position: relative;
     width: 50px;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 .logo #name {
-    display: inline-block;
+    position: relative;
     padding: 0;
-    margin: 10px 0 0 10px;
+    margin: 0;
     font-size: 2rem;
 }
 
 /* Menu */
+
+.menu {
+    display: grid;
+    margin: auto 20px auto 0;
+}
+
 .menu ul {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(5, auto);
     list-style: none;
     text-emphasis: none;
-    margin-right: 20px;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 25px;
 }
 
 .nav-button {
@@ -87,16 +110,10 @@ header {
 
 .nav-button:hover::after {
     transform: translateY(0%);
-  }
-
-.menu a { 
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-size: 25px;
 }
 
 /* Content */
+
 .content {
     position: relative;
     top: 0;
@@ -108,7 +125,7 @@ header {
     justify-content: center;
     position: absolute;
     width: 50vw;
-    height: 90vh;
+    height: 86vh;
     overflow: hidden;
 }
 
@@ -140,12 +157,12 @@ header {
 }
 
 .split-right .button {
-    top: 35%; 
+    top: 35%;
 }
 
 .split-left, .split-right, .button:hover {
     background: var(--button-hover-color);
-    border-color: var(--button-hover-color) ;
+    border-color: var(--button-hover-color);
 }
 
 .split-left {
@@ -160,7 +177,7 @@ header {
     width: 100%;
     height: 100%;
     background: var(--bg-color);
-} 
+}
 
 .split-right {
     right: 0;
@@ -196,4 +213,58 @@ header {
     z-index: 2;
 }
 
+/* Footer */
 
+footer {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 4vh;
+    width: 100vw;
+    border-top: 5px solid var(--yellow);
+    padding: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+footer .social-media {
+    display: flex;
+    align-items: center;
+    text-emphasis: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer .social-icon {
+    margin-left: 20px;
+}
+
+footer .social-icon a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    font-size: 0.7rem;
+    margin: 0 0 0 20px;
+}
+
+/* Media Queries */
+
+@media (max-height: 700px) {
+    .split-left h1 {
+        top: 10%;
+    }
+    .split-right h1 {
+        top: 10%;
+    }
+    .split-left .button {
+        top: 30%;
+    }
+    .split-right .button {
+        top: 30%;
+    }
+}
